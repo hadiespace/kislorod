@@ -35,15 +35,15 @@ mixin fieldRating(parent, id)
 	div(class=`${parent}__field-rating rating`)
 		p.rating__label Ваша оценка
 		div.rating__wrapper
-			label.rating__star
+			label.rating__star(aria-label="Одна звезда")
 				input.visually-hidden(type="radio" name="rating" value="1")
-			label.rating__star
+			label.rating__star(aria-label="Две звезды")
 				input.visually-hidden(type="radio" name="rating" value="2")
-			label.rating__star
+			label.rating__star(aria-label="Три звезды")
 				input.visually-hidden(type="radio" name="rating" value="3")
-			label.rating__star
+			label.rating__star(aria-label="Четыре звезды")
 				input.visually-hidden(type="radio" name="rating" value="4")
-			label.rating__star
+			label.rating__star(aria-label="Пять звезд")
 				input.visually-hidden(type="radio" name="rating" value="5" checked)
 
 mixin fieldMessage(parent, id)
