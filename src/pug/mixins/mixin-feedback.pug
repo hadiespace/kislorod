@@ -1,0 +1,24 @@
+mixin feedback(parent)
+	div(class=`${parent}__feedback feedback`)
+		form.feedback__form(action="/api/subscribe/" enctype="multipart/form-data" data-form novalidate)
+			p.feedback__heading Оставить свой отзыв
+			+fieldName("feedback", "feedback")
+			+fieldEmail("feedback", "feedback")
+			+fieldPhone("feedback", "feedback")
+			+fieldRating("feedback", "feedback")
+			+fieldMessage("feedback", "feedback")
+			//- div.feedback__upload.upload.upload--files
+			div.feedback__upload.upload
+				ul.upload__list
+					li.upload__item
+						input.visually-hidden(id="feedback-upload" type="file" name="files" multiple accept="image/jpeg,image/png")
+						label.upload__label(for="feedback-upload") #[span Загрузить фотографии. Максимальный вес 10 мегабайт. Расширение jpeg, png]
+					//- li.upload__item
+					//- 	button.upload__close(type="button")
+					//- 		svg(width="12" height="12" aria-hidden="true")
+					//- 			use(xlink:href="img/sprite.svg#upload-close")
+					//- 	img(src="img/content/review-photo-01.jpg" alt="")
+			button.feedback__submit.button-main(type="submit") Отправить
+		div.feedback__success
+			p.feedback__big-text Спасибо за ваш отзыв!
+			p.feedback__text Ваш отзыв будет опубликован сразу после того, как его проверят наши сотрудники.

@@ -1,0 +1,11 @@
+section.reviews
+	div.reviews__container.container
+		h1.reviews__heading.heading-1 Отзывы о товаре (2)
+		ul.reviews__list
+			each element, index in DataReviews
+				- const { review, answer } = element;
+				li.reviews__item
+					+review(review, index)
+					if answer
+						+answer(answer)
+		+feedback("reviews")

@@ -1,0 +1,45 @@
+.answer {
+	position: relative;
+	margin: 32px 0 0 84px;
+	border-radius: 5px;
+	padding: 24px;
+	background-color: var(--color-answer-background);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -44px;
+		width: 24px;
+		height: 24px;
+		background-image: url("../img/static/answer-arrow.svg");
+		background-size: cover;
+	}
+}
+
+.answer__date {
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: .04em;
+	color: var(--color-caption);
+}
+
+.answer__author {
+	margin-top: 8px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 16px;
+	color: var(--color-second);
+}
+
+.answer__editor {
+	margin-top: 16px;
+}
+
+.answer__caption {
+	margin-top: 16px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 12px;
+	color: var(--color-second);
+}

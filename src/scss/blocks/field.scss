@@ -1,0 +1,85 @@
+.field {
+	display: grid;
+}
+
+.field__input {
+	margin-top: 6px;
+	outline: none;
+	border: 1px solid var(--color-input);
+	border-radius: 5px;
+	padding: 0;
+	padding: 12px 14px;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--color-second);
+	background-color: #fff;
+	transition: border-color .3s;
+
+	&::placeholder {
+		color: var(--color-caption);
+	}
+
+	@media (hover: hover) {
+		&:hover,
+		&:focus {
+			border-color: var(--color-accent);
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			border-color: var(--color-accent);
+		}
+	}
+}
+
+.field__textarea {
+	margin-top: 6px;
+	outline: none;
+	border: 1px solid var(--color-input);
+	border-radius: 5px;
+	padding: 0;
+	padding: 12px 14px;
+	min-height: 140px;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--color-second);
+	background-color: #fff;
+	transition: border-color .3s;
+
+	&::placeholder {
+		color: var(--color-caption);
+	}
+
+	@media (hover: hover) {
+		&:hover,
+		&:focus {
+			border-color: var(--color-accent);
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			border-color: var(--color-accent);
+		}
+	}
+}
+
+.field__label {
+	justify-self: start;
+	order: -1;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+
+	span {
+		color: var(--color-error);
+	}
+}
+
+.field--error {
+	.field__input,
+	.field__textarea {
+		border-color: var(--color-error);
+	}
+}

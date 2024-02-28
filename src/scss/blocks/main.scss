@@ -1,0 +1,15 @@
+.main {
+	flex: 1 0 auto;
+	margin-bottom: 40px;
+	padding-top: 56px;
+
+	@media (min-width: 960px) {
+		margin-bottom: 80px;
+		padding-top: 80px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom: 120px;
+		padding-top: 96px;
+	}
+}

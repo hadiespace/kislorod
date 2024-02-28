@@ -1,0 +1,14 @@
+mixin review(review, index)
+	blockquote.review
+		span.review__date #[time(datetime=review.datetime)!= review.date]
+		div.review__stars.stars(data-stars=review.rating)
+		p.review__author!= review.author
+		div.review__editor!= review.editor
+		if review.photos
+			ul.review__photos
+				each photo in review.photos
+					li.review__photo
+						div.review__image
+							picture
+								source(srcset=photo.srcset type="image/webp")
+								img(src=photo.img alt="Фото" data-fancybox=`review-${index}`)

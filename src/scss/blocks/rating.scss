@@ -1,0 +1,38 @@
+.rating {
+	display: grid;
+}
+
+.rating__label {
+	justify-self: start;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.rating__wrapper {
+	--width: 0;
+	position: relative;
+	display: flex;
+	margin-top: 12px;
+	gap: 3px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: var(--width);
+		height: 18px;
+		background-image: url("../img/static/stars-active.svg");
+		background-repeat: no-repeat;
+		pointer-events: none;
+	}
+}
+
+.rating__star {
+	width: 18px;
+	height: 18px;
+	background-image: url("../img/static/star-static.svg");
+	background-size: cover;
+	cursor: pointer;
+}

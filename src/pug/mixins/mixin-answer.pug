@@ -1,0 +1,6 @@
+mixin answer(answer)
+	blockquote.answer
+		span.answer__date #[time(datetime=answer.datetime)!= answer.date]
+		p.answer__author Ответ магазина
+		div.answer__editor!= answer.editor
+		p.answer__caption С уважением, клиентский сервис интернет-магазина

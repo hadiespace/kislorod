@@ -1,0 +1,57 @@
+mixin fieldName(parent, id)
+	div(class=`${parent}__field-name field field--required`)
+		input(
+			class="field__input validate-name required"
+			id=`${id}-name`
+			type="text"
+			name="name"
+			placeholder="Иван Иванов"
+		)
+		label.field__label(for=`${id}-name`) Как вас зовут? #[span *]
+
+mixin fieldEmail(parent, id)
+	div(class=`${parent}__field-email validate-email field`)
+		input(
+			class="field__input validate-email"
+			id=`${id}-email`
+			type="email"
+			name="email"
+			placeholder="@"
+		)
+		label.field__label(for=`${id}-email`) E-mail
+
+mixin fieldPhone(parent, id)
+	div(class=`${parent}__field-phone field`)
+		input(
+			class="field__input validate-phone"
+			id=`${id}-phone`
+			type="tel"
+			name="phone"
+			placeholder="+7"
+		)
+		label.field__label(for=`${id}-phone`) Контактный телефон
+
+mixin fieldRating(parent, id)
+	div(class=`${parent}__field-rating rating`)
+		p.rating__label Ваша оценка
+		div.rating__wrapper
+			label.rating__star
+				input.visually-hidden(type="radio" name="rating" value="1")
+			label.rating__star
+				input.visually-hidden(type="radio" name="rating" value="2")
+			label.rating__star
+				input.visually-hidden(type="radio" name="rating" value="3")
+			label.rating__star
+				input.visually-hidden(type="radio" name="rating" value="4")
+			label.rating__star
+				input.visually-hidden(type="radio" name="rating" value="5" checked)
+
+mixin fieldMessage(parent, id)
+	div(class=`${parent}__field-message field field--required`)
+		textarea(
+			class="field__textarea required"
+			id=`${id}-message`
+			name="message"
+			placeholder="Введите текст"
+		)
+		label.field__label(for=`${id}-message`) Комментарий #[span *]
