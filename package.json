@@ -59,9 +59,7 @@
   "dependencies": {
     "@fancyapps/ui": "5.0.33",
     "autosize": "6.0.1",
-    "dropzone": "6.0.0-beta.2",
     "inputmask": "5.0.7",
-    "what-input": "5.2.12",
-    "wicg-inert": "3.1.2"
+    "what-input": "5.2.12"
   }
 }
