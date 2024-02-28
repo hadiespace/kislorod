@@ -1,6 +1,6 @@
 mixin review(review, index)
 	blockquote.review
-		span.review__date #[time(datetime=review.datetime)!= review.date]
+		span.review__date #[time(datetime=review.dateTime)!= review.date]
 		div.review__stars.stars(data-stars=review.rating)
 		p.review__author!= review.author
 		div.review__editor!= review.editor
